@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="VimarCrm.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:VimarCrm.Pages"
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="{localization:Translate Login}"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage"
+        Shell.NavBarIsVisible="False" />
+
+    <!--<ShellContent
+        Title="{localization:Translate MenuClienti}"
+        ContentTemplate="{DataTemplate localClienti:MenuClientiPage}"
+        Route="MenuClientiPage" 
+        Shell.NavBarIsVisible="False" />-->
+
+
+    <!--
+    <ShellContent
+        Title="{localization:Translate MenuClienti}"
+        ContentTemplate="{DataTemplate localClienti:MenuClientiPage}"
+        Route="MenuClientiPage" />
+
+    <ShellContent
+        Title="{localization:Translate Cruscotto}"
+        ContentTemplate="{DataTemplate localClienti:CruscottoPage}"
+        Route="CruscottoPage" />-->
+
+</Shell>

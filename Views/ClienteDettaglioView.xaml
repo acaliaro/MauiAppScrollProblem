@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="VimarCrm.Views.ClienteDettaglioView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:VimarCrm.Models.Cliente">
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <VerticalStackLayout BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
+                <!--  Dati del cliente  -->
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Style="{x:StaticResource DettaglioBorder}"
+                    VerticalOptions="FillAndExpand">
+
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Customer.Nome}" />
+                        <Label Text="{Binding Customer.Indirizzo}" />
+                        <Label>
+                            <Label.Text>
+                                <MultiBinding StringFormat="{}{0} {1} {2}">
+                                    <Binding Path="Customer.Cap" />
+                                    <Binding Path="Customer.Citta" />
+                                    <Binding Path="Customer.CodiceProvincia" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
+                        <Grid
+                            ColumnDefinitions="Auto,*,Auto,*"
+                            ColumnSpacing="10"
+                            RowDefinitions="Auto">
+
+                            <Image Grid.Row="0" Grid.Column="0">
+                                <Image.Source>
+                                    <FontImageSource
+                                        FontFamily="FontAwesome"
+                                        Glyph="envelope"
+                                        Size="40"
+                                        Color="{x:StaticResource Primary}" />
+                                </Image.Source>
+                            </Image>
+
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="{TemplateBinding Customer.EmailAddress1}"
+                                VerticalOptions="Center" />
+
+
+                            <Image Grid.Row="0" Grid.Column="2">
+                                <Image.Source>
+                                    <FontImageSource
+                                        FontFamily="FontAwesome"
+                                        Glyph="phone"
+                                        Size="40"
+                                        Color="{x:StaticResource Primary}" />
+                                </Image.Source>
+                            </Image>
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Text="{TemplateBinding Customer.Telephone1}"
+                                VerticalOptions="Center" />
+
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Border>
+            </VerticalStackLayout>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>

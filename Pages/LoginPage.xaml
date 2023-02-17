@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VimarCrm.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:view="clr-namespace:VimarCrm.Views"
+    xmlns:viewmodel="clr-namespace:VimarCrm.ViewModels"
+    Title="LoginPage"
+    x:DataType="viewmodel:LoginViewModel">
+
+
+    <Grid ColumnDefinitions="*" RowDefinitions="Auto, *, 2*">
+
+        <!--<Grid
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10"
+            ColumnDefinitions="Auto, *, Auto"
+            RowDefinitions="Auto">-->
+
+            <Entry
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="10,0,10,0" />
+
+        <!--</Grid>-->
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="Green" />
+
+        <!--  Buttons  -->
+        <Grid
+            Grid.Row="2"
+            Grid.Column="0"
+            BackgroundColor="Red"
+            ColumnDefinitions="Auto, Auto, Auto, Auto"
+            ColumnSpacing="20"
+            HorizontalOptions="Center"
+            RowDefinitions="Auto, Auto"
+            RowSpacing="20"
+            VerticalOptions="Center">
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                Style="{x:StaticResource HomeButton}"
+                Text="{localization:Translate Cruscotto}">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FontAwesome"
+                        Glyph="chart-simple"
+                        Size="60"
+                        Color="{x:StaticResource Primary}" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Style="{x:StaticResource HomeButton}"
+                Text="{localization:Translate Lavori}">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FontAwesome"
+                        Glyph="person-digging"
+                        Size="60"
+                        Color="{x:StaticResource Primary}" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                Style="{x:StaticResource HomeButton}"
+                Text="{localization:Translate Visite}">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FontAwesome"
+                        Glyph="car"
+                        Size="60"
+                        Color="{x:StaticResource Primary}" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="3"
+                Style="{x:StaticResource HomeButton}"
+                Text="{localization:Translate Transfer}">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FontAwesome"
+                        Glyph="file-pen"
+                        Size="60"
+                        Color="{x:StaticResource Primary}" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Style="{x:StaticResource HomeButton}"
+                Text="{localization:Translate FatturatiOkKo}">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FontAwesome"
+                        Glyph="star"
+                        Size="60"
+                        Color="{x:StaticResource Primary}" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Style="{x:StaticResource HomeButton}"
+                Text="{localization:Translate Contatti}">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FontAwesome"
+                        Glyph="address-card"
+                        Size="60"
+                        Color="{x:StaticResource Primary}" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Style="{x:StaticResource HomeButton}"
+                Text="{localization:Translate Contributi}">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FontAwesome"
+                        Glyph="euro-sign"
+                        Size="60"
+                        Color="{x:StaticResource Primary}" />
+                </Button.ImageSource>
+            </Button>
+
+        </Grid>
+
+
+        <!--<Grid
+                Grid.Row="1"
+                ColumnDefinitions="*"
+                RowDefinitions="*, 2*">
+
+
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="Green" />
+
+        -->
+        <!--  Buttons  -->
+        <!--
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    BackgroundColor="Red"
+                    ColumnDefinitions="Auto, Auto, Auto, Auto"
+                    ColumnSpacing="20"
+                    HorizontalOptions="Center"
+                    RowDefinitions="Auto, Auto"
+                    RowSpacing="20"
+                    VerticalOptions="Center">
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Style="{x:StaticResource HomeButton}"
+                        Text="{localization:Translate Cruscotto}">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="chart-simple"
+                                Size="60"
+                                Color="{x:StaticResource Primary}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Style="{x:StaticResource HomeButton}"
+                        Text="{localization:Translate Lavori}">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="person-digging"
+                                Size="60"
+                                Color="{x:StaticResource Primary}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Style="{x:StaticResource HomeButton}"
+                        Text="{localization:Translate Visite}">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="car"
+                                Size="60"
+                                Color="{x:StaticResource Primary}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        Style="{x:StaticResource HomeButton}"
+                        Text="{localization:Translate Transfer}">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="file-pen"
+                                Size="60"
+                                Color="{x:StaticResource Primary}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Style="{x:StaticResource HomeButton}"
+                        Text="{localization:Translate FatturatiOkKo}">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="star"
+                                Size="60"
+                                Color="{x:StaticResource Primary}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Style="{x:StaticResource HomeButton}"
+                        Text="{localization:Translate Contatti}">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="address-card"
+                                Size="60"
+                                Color="{x:StaticResource Primary}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Style="{x:StaticResource HomeButton}"
+                        Text="{localization:Translate Contributi}">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="euro-sign"
+                                Size="60"
+                                Color="{x:StaticResource Primary}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                </Grid>
+
+            </Grid>-->
+
+    </Grid>
+</ContentPage>
